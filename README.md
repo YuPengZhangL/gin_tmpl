@@ -1,4 +1,4 @@
-# gg_web_tmpl
+# gin_tmpl
 
 ## 简介
 
