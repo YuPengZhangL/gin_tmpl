@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  mysql:
+    image: mysql:8.0.27
+    container_name: mysql
+    restart: on-failure:3
+    networks:
+      gin_network:
+    command: --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+      --explicit_defaults_for_timestamp=true
+    ports:
+      - "3306:3306"
+    environment:
+      # 请修改此密码，并对应修改上方 Halo 服务的 SPRING_DATASOURCE_PASSWORD 变量值
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=gg_web_tmpl
+      #
+  redis:
+    image: redis
+    container_name: redis
+    restart: on-failure:3
+    networks:
+      gin_network:
+    # 请修改此密码，并对应修改上方 Halo 服务的 SPRING_REDIS_PASSWORD 变量值
+    command: redis-server --requirepass 123456
+    ports:
+      - "6379:6379"
+networks:
+  gin_network:

@@ -1,0 +1,20 @@
+app:
+  name: gg_web_tmpl
+  release: false
+  port: 8081
+  log_level: debug
+  log_path: ./logs
+  jwt_sign_key: gg_web_tmpl
+  jwt_issuer: gg_web_tmpl
+
+mysql:
+  user: root
+  password: Zyp213213.
+  host: 192.168.27.204
+  port: 3306
+  db: gg_web_tmpl
+
+redis:
+  host: 192.168.27.204
+  port: 6379
+  password: Zyp213213.
