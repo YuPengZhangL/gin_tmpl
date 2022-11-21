@@ -31,12 +31,12 @@
 ## 快速启动
 
 ```shell
-git clone https://github.com/kakkk/gg_web_tmpl.git
+git clone https://github.com/YuPengZhangL/gin_tmpl.git
 cd gg_web_tmpl
 vi conf/config.yaml #修改相关配置
 go mod tidy
 go build
-./gg_web_tmpl
+./gin_tmpl
 ```
 
 ## 单元测试
