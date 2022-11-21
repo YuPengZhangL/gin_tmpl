@@ -32,7 +32,7 @@
 
 ```shell
 git clone https://github.com/YuPengZhangL/gin_tmpl.git
-cd gg_web_tmpl
+cd gin_tmpl
 vi conf/config.yaml #修改相关配置
 go mod tidy
 go build
